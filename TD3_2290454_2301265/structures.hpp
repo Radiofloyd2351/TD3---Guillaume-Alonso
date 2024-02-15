@@ -28,9 +28,13 @@ private:
 	bool possedeLesFilms_ = false; // Les films seront détruits avec la liste si elle les possède.
 };
 
-struct ListeActeurs {
+class ListeActeurs {
+public:
 	int capacite, nElements;
-	Acteur** elements; // Pointeur vers un tableau de Acteur*, chaque Acteur* pointant vers un Acteur.
+	unique_ptr<Acteur*[]> elements; // Pointeur vers un tableau de Acteur*, chaque Acteur* pointant vers un Acteur.
+	ListeActeurs(int capacite, int nElements) {
+		elements = make_unique<Acteur*[]>(nElements);
+	}
 };
 
 struct Film
