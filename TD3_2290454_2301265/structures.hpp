@@ -25,7 +25,7 @@ private:
 
 	int capacite = 0, nElements = 0;
 	Film** elements = nullptr; // Pointeur vers un tableau de Film*, chaque Film* pointant vers un Film.
-	bool possedeLesFilms_ = false; // Les films seront détruits avec la liste si elle les possède.
+	bool possedeLesFilms_ = false; // Les films seront détruits avec la liste si elle les possède.#
 };
 
 class ListeActeurs {
